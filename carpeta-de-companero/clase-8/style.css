@@ -1,0 +1,137 @@
+.box {
+    border-radius: 6px;
+    width: 80px;
+    height: 40px;
+    margin: 50px auto;
+}
+
+.box-uno{
+    background-color: mediumaquamarine;
+}
+
+.box-dos{
+    background-color: mediumpurple;
+    /* transition-property : ; */
+    /* transition-duration : ; */
+    transition: all 2s;
+}
+
+.box:hover{
+    transform: scale(4);
+}
+
+.container-circle div{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.circle1{
+    background-color: aqua;
+    transition: all 1.5s linerar;
+}
+
+.circle2{
+    background-color: mediumblue;
+    transition: all 1.5s ease-in;
+}
+
+.circle3{
+    background-color: mediumvioletred;
+    transition: all 1.5s ease-out;
+}
+
+.circle4{
+    background-color: mediumseagreen;
+    transition: all 1.5s ease-in-out;
+}
+
+.circle5{
+    background-color: mediumorchid;
+    transition: all 1.5s ease;
+}
+
+.container-circle:hover .circle1, 
+.container-circle:hover .circle2, 
+.container-circle:hover .circle3, 
+.container-circle:hover .circle4, 
+.container-circle:hover .circle5 {
+    transform: translateX(200px);
+}
+
+.square-uno, .square-dos {
+    border-radius: 4px;
+    height: 150px;
+    width: 150px;
+    margin: 100px;
+    position: absolute;
+}
+
+.square-uno{
+    background-color: teal;
+}
+
+.square-dos{
+    background-color: steelblue;
+    transition: all .8s;
+}
+
+.square-dos:hover {
+    transform: translate(40px, 40px);
+    opacity: 0.2;
+}
+
+.combinado {
+    background-color: violet;
+    height: 75px;
+    width: 75px;
+    margin: 50px auto;
+    transition: all 2s;
+}
+
+.combinado:hover {
+    transform: rotate(90deg) scale(2) translateX(120px);
+
+    /* prefijos */
+
+    /* para Chrome & Edge */
+    -webkit-transform: rotate(90deg) scale(2) translateX(120px);
+    /* para Opera */
+    -o-transform: rotate(90deg) scale(2) translateX(120px);
+    /* para Mozilla */
+    -moz-transform: rotate(90deg) scale(2) translateX(120px);
+}
+
+.animaciones {
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    background-color: yellow;
+}
+
+.animaciones:hover {
+    /* animation-name
+       animation duration */
+    animation: changeColor 4s;
+}
+
+/* Controlar los FOTOGRAMAS de la animación*/
+@keyframes changeColor {
+    0% {
+        background-color:  violet;
+    }
+    15% {
+        background-color: tomato;
+        border-radius: 80px;
+    }
+    25% {
+        width: 80%;
+    }
+    50% {
+        border: 8px solid black;
+    }
+    100% {
+        background-color: teal;
+    }
+}
